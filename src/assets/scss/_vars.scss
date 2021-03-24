@@ -1,4 +1,5 @@
 // * Colors:
+
 $white:       #fff;
 $gray:        #333333;
 $gray-second: #4f4f4f;
@@ -9,6 +10,7 @@ $line: rgba(189, 189, 189, 0.57);
 $btn-grad: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
 
 // * Size:
+
 $base:  1.4rem;
 $s48:   4.8rem;
 $s36:   3.6rem;
@@ -19,4 +21,15 @@ $s16:   1.6rem;
 $s12:   1.2rem;
 
 // * Fonts:
+
 $font: 'Roboto', sans-serif;
+
+// * Media:
+
+$hd:      1920px;
+$laptop:  1200px;
+$tablet:  640px;
+$phone:   320px;
+//$m414: 414px;
+//$m375: 375px;
+//$m320: 320px;

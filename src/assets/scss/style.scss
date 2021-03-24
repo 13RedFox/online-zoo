@@ -1,5 +1,15 @@
+// ! Imports:
+
 @import "vars";
-//@import "vendor/reset";
+@import "mixins";
+
+// !  Main style:
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 62.5%;
@@ -13,8 +23,22 @@ body {
   //line-height: 1.5;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// !  Blocks style:
+
+@import "blocks/header";
