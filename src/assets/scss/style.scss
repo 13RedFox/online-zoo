@@ -1,0 +1,20 @@
+@import "vars";
+//@import "vendor/reset";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #181818;
+  font-family: $font;
+  font-size: $base;
+  color: $white;
+  //line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
