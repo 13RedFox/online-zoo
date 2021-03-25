@@ -1,0 +1,116 @@
+// ! Imports:
+
+@import "vars";
+@import "mixins";
+
+// !  Main style:
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #181818;
+  font-family: $font;
+  font-size: $base;
+  color: $white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dark-mode-bg {
+  background: $gray !important;
+}
+
+.dark-mode-col {
+  color: $silver-line !important;
+}
+
+.light-mode-bg {
+  background: $silver-line !important;
+}
+
+.main__logo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+
+  &-sup {
+    font-size: $s36;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  &-sub {
+    font-size: $s18;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+}
+
+.main__nav-link {
+  font-size: $s16;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+// ! Burger
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 4rem;
+  height: 2.1rem;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  @include media($tablet) {
+    right: 2rem;
+  }
+  @include media($laptop) {
+    display: none;
+  }
+
+  &__line {
+    display: flex;
+    width: 40px;
+    height: 3px;
+    background: $gray;
+    margin-bottom: .6rem;
+    transition: all .3s ease-in-out;
+
+    &:last-child {
+      width: 33px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// !  Blocks style:
+
+@import "blocks/header";
+@import "blocks/footer";
