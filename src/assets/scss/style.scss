@@ -39,6 +39,45 @@ a {
   margin: 0 auto;
 }
 
+.light-mode-bg {
+  background: $white!important;
+}
+.light-mode-col {
+  color: $gray!important;
+}
+
+.dark-mode-bg {
+  background: $gray!important;
+}
+.dark-mode-col {
+  color: $silver-line!important;
+}
+
+.main__logo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+
+  &-sup {
+    font-size: $s36;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  &-sub {
+    font-size: $s18;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+}
+
+.main__nav-link {
+  font-size: $s16;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 // !  Blocks style:
 
 @import "blocks/header";
+@import "blocks/footer";

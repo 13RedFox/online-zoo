@@ -3,26 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $white;
+  background: $silver-line;
   box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
   padding: 0 15rem;
   margin: 0 auto;
+  transition: all .3s ease-in-out;
 
   &__logo {
-    display: flex;
-    flex-direction: column;
     color: $gray;
-    font-weight: 900;
-
-    &-sup {
-      font-size: $s36;
-      line-height: 2.5rem;
-    }
-
-    &-sub {
-      font-size: $s18;
-      letter-spacing: 0.08em;
-    }
+    transition: all .3s ease-in-out;
   }
 
   &__nav {
@@ -34,13 +23,18 @@
       align-items: center;
     }
 
+    .light-mode-col::after {
+      background: $gray;
+    }
+
+    .dark-mode-col::after {
+      background: $silver-line;
+    }
+
     &-link {
       position: relative;
-      font-size: $s16;
-      font-weight: 500;
       color: $gray;
-      text-transform: capitalize;
-      transition: font-weight .3s ease-in-out;
+      transition: all .3s ease-in-out;
 
       &:hover {
         font-weight: 900;
@@ -83,7 +77,6 @@
     display: inline-block;
     position: relative;
     margin: 0;
-    //border: 2px solid #474755;
     background: $map;
     transition: all .3s ease-in-out;
 

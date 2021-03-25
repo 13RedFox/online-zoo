@@ -25,39 +25,63 @@ a {
   width: 100%;
   margin: 0 auto; }
 
+.light-mode-bg {
+  background: #fff !important; }
+
+.light-mode-col {
+  color: #333333 !important; }
+
+.dark-mode-bg {
+  background: #333333 !important; }
+
+.dark-mode-col {
+  color: #fefefe !important; }
+
+.main__logo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900; }
+  .main__logo-sup {
+    font-size: 3.6rem;
+    line-height: 2.5rem;
+    text-transform: uppercase; }
+  .main__logo-sub {
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
+    text-align: center; }
+
+.main__nav-link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize; }
+
 .header {
   height: 9.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #fefefe;
   box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
   padding: 0 15rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  transition: all .3s ease-in-out; }
   .header__logo {
-    display: flex;
-    flex-direction: column;
     color: #333333;
-    font-weight: 900; }
-    .header__logo-sup {
-      font-size: 3.6rem;
-      line-height: 2.5rem; }
-    .header__logo-sub {
-      font-size: 1.8rem;
-      letter-spacing: 0.08em; }
+    transition: all .3s ease-in-out; }
   .header__nav {
     width: 57.3rem; }
     .header__nav-list {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+    .header__nav .light-mode-col::after {
+      background: #333333; }
+    .header__nav .dark-mode-col::after {
+      background: #fefefe; }
     .header__nav-link {
       position: relative;
-      font-size: 1.6rem;
-      font-weight: 500;
       color: #333333;
-      text-transform: capitalize;
-      transition: font-weight .3s ease-in-out; }
+      transition: all .3s ease-in-out; }
       .header__nav-link:hover {
         font-weight: 900; }
       .header__nav-link::after {
@@ -106,3 +130,22 @@ a {
         transform: translateX(22px);
         background: #1B1B1B;
         box-shadow: 2px 4px 15px rgba(230, 230, 230, 0.15); }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333333;
+  padding: 9rem 15rem 7rem; }
+  .footer__logo {
+    color: #fefefe; }
+  .footer__nav {
+    width: 40.4rem; }
+    .footer__nav-list {
+      display: flex; }
+    .footer__nav-item {
+      margin-right: 7.3rem; }
+      .footer__nav-item:last-child {
+        margin-right: 0; }
+    .footer__nav-link {
+      color: #fefefe; }
