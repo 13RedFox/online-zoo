@@ -1,0 +1,173 @@
+.footer {
+  background: $gray;
+  padding: 9rem 15rem;
+
+  &__wrap {
+    display: flex;
+    margin-bottom: 5.7rem;
+  }
+
+  &__first {
+    width: 50%;
+  }
+
+  &__logo {
+    width: 60px;
+    align-items: center;
+    color: $silver-line;
+  }
+
+  &__nav {
+    min-width: 40.4rem;
+    margin-right: 14rem;
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      .dark-mode-col::after {
+        background: $silver-line;
+      }
+    }
+
+    &-item {
+      margin-right: 7.3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-link {
+      color: $silver-line;
+
+      &::after {
+        color: $silver-line;
+      }
+    }
+  }
+
+  &__second {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    min-width: 27.5rem;
+    @include media($laptop) {
+      display: none;
+    }
+    @include media($hd) {
+      display: block;
+    }
+  }
+
+  &__form {
+    width: 38.3rem;
+    display: block;
+
+    &-title {
+      font-size: $s20;
+      font-weight: 900;
+      cursor: $silver-line;
+      margin-bottom: 3.3rem;
+    }
+
+    &-name::placeholder,
+    &-email::placeholder {
+      color: #e0e0e0;
+
+    }
+
+    &-name,
+    &-email {
+      color: #e0e0e0;
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #bdbdbd;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .txt-area {
+      display: block;
+      position: relative;
+
+      span {
+        display: block;
+        position: absolute;
+        top: -.6rem;
+        left: .7rem;
+        font-size: $s12;
+        background: $gray;
+        padding: 0 .5rem 0 .4rem;
+        //transform: translate(-50% -50%);
+      }
+    }
+
+    &-textarea {
+      color: #e0e0e0;
+      width: 100%;
+      height: 11.5rem;
+      background: transparent;
+      border: 1px solid #bdbdbd;
+      border-radius: .3rem;
+      resize: none;
+      outline: none;
+      padding: 1rem .5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &-check {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    &-checkbox {
+      margin-right: .5rem;
+    }
+
+    &-send {
+      position: relative;
+      right: -66.6%;
+      display: flex;
+      justify-content: flex-start;
+      text-transform: uppercase;
+      color: $silver-line;
+      background: transparent;
+      border: none;
+      min-width: 10.8rem;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: .5rem;
+        height: .5rem;
+        border-top: 1px solid $silver-line;
+        border-right: 1px solid $silver-line;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 48px;
+        height: .1rem;
+        background-color: $silver-line;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+
+}

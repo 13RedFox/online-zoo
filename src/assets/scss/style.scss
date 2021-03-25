@@ -69,9 +69,44 @@ a {
 }
 
 .main__nav-link {
+  position: relative;
   font-size: $s16;
   font-weight: 500;
   text-transform: capitalize;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    font-weight: 700;
+  }
+
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -3px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.3s ease-in-out 0s, left 0.3s ease-in-out 0s;
+    width: 0;
+  }
+
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+}
+
+.main__btn {
+  width: 24.5rem;
+  text-transform: uppercase;
+  background: $btn-grad;
+  color: $white;
+  border: none;
+  border-radius: .3rem;
+  padding: 1.7rem 0;
+  cursor: pointer;
 }
 
 // ! Burger

@@ -42,30 +42,10 @@
     }
 
     &-link {
-      position: relative;
       color: $gray;
-      transition: all .3s ease-in-out;
-
-      &:hover {
-        font-weight: 900;
-      }
 
       &::after {
-        background: none repeat scroll 0 0 transparent;
         background: $gray;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        transition: width 0.3s ease-in-out 0s, left 0.3s ease-in-out 0s;
-        width: 0;
-      }
-
-      &:hover:after {
-        width: 100%;
-        left: 0;
       }
     }
 
@@ -99,6 +79,10 @@
       flex-direction: column;
       align-items: center;
       padding-top: 10rem;
+
+      .dark-mode-col::after {
+        background: $silver-line;
+      }
     }
 
     &-item {
@@ -116,6 +100,7 @@
 
   input[type="checkbox"] {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     -webkit-tap-highlight-color: transparent;
     border-color: transparent;
