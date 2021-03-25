@@ -165,8 +165,10 @@ a {
       .header__mobile {
         display: none; } }
   .header input[type="checkbox"] {
+    -webkit-appearance: none;
     appearance: none;
     -webkit-tap-highlight-color: transparent;
+    border-color: transparent;
     cursor: pointer; }
     .header input[type="checkbox"]:focus {
       outline: 0; }

@@ -115,8 +115,10 @@
   }
 
   input[type="checkbox"] {
+    -webkit-appearance: none;
     appearance: none;
     -webkit-tap-highlight-color: transparent;
+    border-color: transparent;
     cursor: pointer;
 
     &:focus {
