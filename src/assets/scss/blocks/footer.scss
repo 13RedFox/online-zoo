@@ -1,29 +1,83 @@
 .footer {
   background: $gray;
-  padding: 9rem 15rem;
+  padding: 4rem 1rem 2.5rem;
+
+  @include media($tablet) {
+    padding: 8.5rem 2rem 4.5rem;
+  }
+
+  @include media($lg) {
+    padding: 8.5rem 9rem 4.5rem;
+  }
+
+  // @include media($laptop) {
+  //   padding: 9rem 11rem;
+  // }
+
+  @include media($hd) {
+    padding: 9rem 15rem;
+  }
 
   &__wrap {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 5.7rem;
+
+    @include media($tablet) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__first {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    @include media($tablet) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    @include media($lg) {
+      width: 50%;
+    }
   }
 
   &__logo {
+    display: flex;
     width: 60px;
     align-items: center;
     color: $silver-line;
   }
 
   &__nav {
-    min-width: 40.4rem;
-    margin-right: 14rem;
+    width: 100%;
+
+    @include media($tablet) {
+      width: 100%;
+    }
+
+    @include media($laptop) {
+      min-width: 40.4rem;
+    }
+
+    @include media($hd) {
+      margin-right: 14rem;
+    }
 
     &-list {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+
+      @include media($tablet) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      @include media($lg) {
+        justify-content: flex-start;
+      }
 
       .dark-mode-col::after {
         background: $silver-line;
@@ -31,7 +85,15 @@
     }
 
     &-item {
-      margin-right: 7.3rem;
+      margin-bottom: 0.5rem;
+
+      @include media($tablet) {
+        margin-bottom: 0;
+      }
+
+      @include media($lg) {
+        margin-right: 7.3rem;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -48,30 +110,75 @@
   }
 
   &__second {
+    width: 50%;
     display: flex;
     align-items: center;
   }
 
   &__btn {
     min-width: 27.5rem;
-    @include media($laptop) {
-      display: none;
-    }
+  }
+
+  .btn-one {
+    display: none;
+
     @include media($hd) {
       display: block;
     }
   }
 
+  .btn-two {
+    width: 100%;
+    display: block;
+
+    @include media($tablet) {
+      width: 27.5rem;
+    }
+
+    @include media($hd) {
+      display: none;
+    }
+  }
+
   // * FORM
 
+  &__forms {
+    width: 100%;
+    margin-bottom: 5.5rem;
+
+    @include media($tablet) {
+      width: 50%;
+      margin-bottom: 7.7rem;
+    }
+
+    @include media($lg) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    @include media($laptop) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
   &__form {
-    width: 38.3rem;
+    width: 100%;
     display: block;
+
+    @include media($tablet) {
+      width: 90%;
+    }
+
+    @include media($lg) {
+      width: 38.3rem;
+    }
 
     &-title {
       font-size: $s20;
       font-weight: 900;
-      cursor: $silver-line;
+      color: $silver-line;
+      margin-top: 0;
       margin-bottom: 3.3rem;
     }
 
@@ -104,7 +211,6 @@
         font-size: $s12;
         background: $gray;
         padding: 0 0.5rem 0 0.4rem;
-        //transform: translate(-50% -50%);
       }
     }
 
@@ -182,7 +288,7 @@
 
     &-send {
       position: relative;
-      right: -66.6%;
+      right: -63%;
       display: flex;
       justify-content: flex-start;
       text-transform: uppercase;
@@ -191,6 +297,10 @@
       border: none;
       min-width: 10.8rem;
       cursor: pointer;
+
+      @include media($tablet) {
+        right: -66.6%;
+      }
 
       &::before {
         content: '';
@@ -222,14 +332,23 @@
   // * CONTACTS
 
   &__contacts {
-    display: flex;
-    flex-direction: column;
-    width: 19rem;
-    color: $silver-line;
+    width: 100%;
+
+    @include media($tablet) {
+      width: 50%;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 19rem;
+      color: $silver-line;
+    }
 
     &-title {
       font-weight: 700;
       text-transform: uppercase;
+      margin-top: 0;
       margin-bottom: 3.5rem;
     }
 
@@ -246,6 +365,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4rem;
+
+    @include media($hd) {
+      margin-bottom: 0;
+    }
   }
 
   &__line {
