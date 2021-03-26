@@ -68,7 +68,7 @@ a {
     font-size: 1.6rem;
     font-weight: 500;
     text-transform: capitalize;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .main__nav-link:hover {
@@ -78,7 +78,7 @@ a {
 .main__nav-link:after {
     background: none repeat scroll 0 0 transparent;
     bottom: -3px;
-    content: "";
+    content: '';
     display: block;
     height: 2px;
     left: 50%;
@@ -95,10 +95,10 @@ a {
 .main__btn {
     width: 24.5rem;
     text-transform: uppercase;
-    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+    background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
     color: #fff;
     border: none;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     padding: 1.7rem 0;
     cursor: pointer;
 }
@@ -138,8 +138,8 @@ a {
     width: 40px;
     height: 3px;
     background: #333333;
-    margin-bottom: .6rem;
-    transition: all .3s ease-in-out;
+    margin-bottom: 0.6rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .burger__line:last-child {
@@ -445,11 +445,11 @@ a {
 .footer__form .txt-area span {
     display: block;
     position: absolute;
-    top: -.6rem;
-    left: .7rem;
+    top: -0.6rem;
+    left: 0.7rem;
     font-size: 1.2rem;
     background: #333333;
-    padding: 0 .5rem 0 .4rem;
+    padding: 0 0.5rem 0 0.4rem;
 }
 
 .footer__form-textarea {
@@ -458,10 +458,10 @@ a {
     height: 11.5rem;
     background: transparent;
     border: 1px solid #bdbdbd;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     resize: none;
     outline: none;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
     margin-bottom: 2.5rem;
 }
 
@@ -473,8 +473,59 @@ a {
     margin-bottom: 2rem;
 }
 
+.footer__form input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+.footer__form input[type='checkbox']:focus {
+    outline: 0;
+}
+
 .footer__form-checkbox {
-    margin-right: .5rem;
+    display: block;
+    position: relative;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 1px;
+    margin-right: 0.5rem;
+}
+
+.footer__form-checkbox:checked::before {
+    content: '';
+    position: absolute;
+    bottom: 0.23rem;
+    left: 0.07rem;
+    display: block;
+    width: 0.45rem;
+    height: 0.1rem;
+    background: #bdbdbd;
+    -webkit-transform: translateY(-50%) rotate(55deg);
+    transform: translateY(-50%) rotate(55deg);
+}
+
+.footer__form-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    bottom: 0.4rem;
+    left: 0.2rem;
+    display: block;
+    width: 0.9rem;
+    height: 0.1rem;
+    background: #bdbdbd;
+    -webkit-transform: translateY(-50%) rotate(-55deg);
+    transform: translateY(-50%) rotate(-55deg);
+}
+
+.footer__form-text {
+    font-size: 1.2rem;
+    line-height: 14px;
+    color: #bdbdbd;
 }
 
 .footer__form-send {
@@ -498,8 +549,8 @@ a {
     position: absolute;
     top: 50%;
     right: 0;
-    width: .5rem;
-    height: .5rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-top: 1px solid #fefefe;
     border-right: 1px solid #fefefe;
     -webkit-transform: translateY(-50%) rotate(45deg);
@@ -513,8 +564,62 @@ a {
     top: 50%;
     right: 0;
     width: 48px;
-    height: .1rem;
+    height: 0.1rem;
     background-color: #fefefe;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.footer__contacts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 19rem;
+    color: #fefefe;
+}
+
+.footer__contacts-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+}
+
+.footer__contacts-adress, .footer__contacts-contacts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.footer__social {
+    width: 12.5rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer__line {
+    width: 100%;
+    height: 0.5px;
+    background: #fefefe;
+    margin-bottom: 2.8rem;
+}
+
+.footer__copy {
+    width: 28rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: #bdbdbd;
+}
+
+.footer .first {
+    margin-bottom: 0.5rem;
 }

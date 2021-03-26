@@ -20,6 +20,7 @@ body {
   font-family: $font;
   font-size: $base;
   color: $white;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -146,5 +147,6 @@ a {
 
 // !  Blocks style:
 
+@import './blocks/preload.scss';
 @import 'blocks/header';
 @import 'blocks/footer';

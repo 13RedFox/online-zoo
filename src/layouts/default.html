@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {{> head }}
-</head>
-<body>
+  </head>
+  <body>
+    <div class="cssload-loader" id="preload">
+      <div class="cssloader-wrapper">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+      </div>
+    </div>
 
-    {{> header }}
-
-    {{> body }}
-
-    {{> footer }}
+    {{> header }} {{> body }} {{> footer }}
 
     <script src="assets/js/app.js"></script>
-</body>
+  </body>
 </html>
