@@ -1,9 +1,9 @@
-// ! Imports:
+// * Imports:
 
 @import 'vars';
 @import 'mixins';
 
-// !  Main style:
+// *  Main style:
 
 *,
 *::before,
@@ -109,7 +109,7 @@ a {
   cursor: pointer;
 }
 
-// ! Burger
+// * Burger
 
 .burger {
   display: flex;
@@ -150,3 +150,7 @@ a {
 @import './blocks/preload';
 @import './blocks/header';
 @import './blocks/footer';
+
+// !  About
+
+@import './blocks/about/first-screen';
