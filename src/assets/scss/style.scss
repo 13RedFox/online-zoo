@@ -97,6 +97,16 @@ p {
   }
 }
 
+.main__title {
+  font-size: $s36;
+  margin-bottom: 2rem;
+
+  @include media($laptop) {
+    font-size: $s48;
+    margin-bottom: 3rem;
+  }
+}
+
 .main__nav-link {
   position: relative;
   font-size: $s16;
@@ -183,3 +193,4 @@ p {
 
 @import './blocks/about/first-screen';
 @import './blocks/about/works';
+@import './blocks/about/pets';

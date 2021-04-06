@@ -70,6 +70,14 @@ p {
     letter-spacing: 0.08em;
     text-align: center; }
 
+.main__title {
+  font-size: 3.6rem;
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 1200px) {
+    .main__title {
+      font-size: 4.8rem;
+      margin-bottom: 3rem; } }
+
 .main__nav-link {
   position: relative;
   font-size: 1.6rem;
@@ -696,13 +704,6 @@ p {
     @media screen and (min-width: 1920px) {
       .works__wrapper {
         min-width: 79rem; } }
-  .works__title {
-    font-size: 3.6rem;
-    margin-bottom: 2rem; }
-    @media screen and (min-width: 1200px) {
-      .works__title {
-        font-size: 4.8rem;
-        margin-bottom: 3rem; } }
   .works__text {
     color: #4f4f4f;
     line-height: 16.41px;
@@ -792,3 +793,25 @@ p {
       margin-bottom: 1.5rem; }
     .works__cards-text {
       color: #4f4f4f; }
+
+.pets {
+  background: #fbfbfb;
+  padding: 5rem 1rem; }
+  @media screen and (min-width: 768px) {
+    .pets {
+      padding: 10rem 2rem; } }
+  @media screen and (min-width: 991px) {
+    .pets {
+      padding: 10rem 0rem; } }
+  .pets__title {
+    text-align: center;
+    color: #333333; }
+  .pets__wrapper {
+    display: flex; }
+    .pets__wrapper-card {
+      max-width: 274px;
+      height: 400px; }
+      .pets__wrapper-card img {
+        display: block;
+        width: 270px;
+        height: 100%; }
